@@ -1,0 +1,403 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+:root{
+    --primary_color: #dfdfe3;
+    --secondary_color: #222654;
+}
+
+body{
+    background-color: var(--primary_color);
+    background: linear-gradient(to right, #1fa2ff, #12d8fa, #a6ffcb);
+}
+
+
+body::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+	background-color: #F5F5F5;
+	border-radius: 10px;
+}
+
+body::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color: #FFF;
+	background-image: -webkit-gradient(linear,
+									   40% 0%,
+									   75% 84%,
+									   from(#4D9C41),
+									   to(#19911D),
+									   color-stop(.6,#54DE5D));
+}
+
+
+/* ================================================ */
+/* header styling */
+/* ================================================= */
+
+
+#header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #032541;
+    width: 100%;
+    height: 4rem;
+}
+
+#left-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 45%;
+    color: white;
+    /* border: 1px solid darkgoldenrod; */
+}
+
+#left-header #logo img{
+    width: 100%;
+    height: 1.3rem;
+}
+
+#right-header{
+    width: 30%;
+    font-size: 1.2rem;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+
+#right-header div:nth-child(1){
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+#right-header div:nth-child(2){
+    border: 0.1rem solid white;
+    padding: 0.1% 0.5%;
+}
+
+/* ======================================================== */
+/* Search section styling */
+/* ======================================================== */
+
+#search{
+    /* border: 1px solid red; */
+    min-height: 19rem;
+    max-height: 22rem;
+    background-image: url("https://www.themoviedb.org/t/p/w1920_and_h600_multi_faces_filter(duotone,032541,01b4e4)/5GISMqlRXMEyBrgEqyvhaMMuQmJ.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2rem;
+}
+
+#title{
+    color: white;
+    font-size: 1.8rem;
+    margin-top: 2rem;
+}
+
+#title h2{
+    font-size: 4rem;
+    line-height: 5rem;
+}
+
+#search-bar{
+    margin-top: 5rem;
+    position: relative;
+}
+
+#search-bar input{
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 2rem;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+#search-bar button{
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: 0.8rem;
+    width: 10%;
+    font-weight: 600;
+    background-color: #0c8b0c;
+    color: white;
+    border-radius: 2rem;
+    position: absolute;
+    right: 0rem;
+}
+
+/* ======================================================== */
+/* Card section styling */
+/* ======================================================== */
+
+#movie-wrapper{
+    /* border: 1px solid orange; */
+    padding: 2rem 2.5rem 2.5rem;
+    /* background: linear-gradient(to right, #1fa2ff, #12d8fa, #a6ffcb); */
+}
+
+#movie-wrapper #toggle-wrapper{
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid green; */
+    width: 30%;
+}
+
+#toggle-wrapper .toggle{
+    display: flex;
+    width: 40%;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+#toggle-wrapper .toggle:nth-child(2){
+    justify-content: space-between;
+    border: 1px solid #03032a;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+}
+
+#card-wrapper{
+    /* border: 1px solid red; */
+    /* height: 30px; */
+    margin-top: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* column-gap: 2.26rem; */
+    row-gap: 2.26rem;
+}
+
+#card-wrapper .movie-card{
+    width: 15rem;
+    border-radius: 5%;
+    box-shadow: rgb(0 0 0 / 50%) 0px 8px 15px;
+    margin-right: 0.5rem;
+    /* border: 1px solid green; */
+}
+
+#card-wrapper .movie-card img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
+    /* box-shadow: rgb(0 0 0 / 50%) 0px 8px 15px; */
+}
+
+/* box-shadow: rgb(0 0 0 / 70%) 3px 10px 20px, rgb(0 0 0 / 98%) 1px 6px 6px; */
+
+/* box-shadow: 1px 1px black; */
+
+#card-wrapper .movie-card:hover{
+    transform: scale(1.1);
+    transition: transform .3s ease-in-out;
+    box-shadow: rgb(0 0 0 / 70%) 3px 10px 20px, rgb(0 0 0 / 98%) 1px 6px 6px;
+}
+
+/* pagination */
+
+#pagination-div{
+    margin-bottom: 0.5rem;
+}
+
+#btn-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+    height: 3rem;
+    /* background: linear-gradient(to right, #1fa2ff, #12d8fa, #a6ffcb); */
+}
+
+#btn-wrapper button{
+    height: 100%;
+    border: none;
+    outline: none;
+    width: 5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+#btn-wrapper #current-page{
+    /*border: 1px solid black; */
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+#btn-wrapper #current-page p{
+    margin: 0;
+}
+
+
+#result-background{
+    /* border: 1px solid brown; */
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    filter: opacity(0.8);
+    background-color: black;
+}
+
+
+/* ================================================================================================== */
+/* Detail HTML page styling */
+/* ================================================================================================== */
+
+#movie_detail{
+    /* border: 1px solid red; */
+    height: 100vh;
+    background-image: linear-gradient(to right, rgba(5.10%, 5.88%, 7.84%, 1.00) 150px, rgba(5.10%, 5.88%, 7.84%, 0.84) 100%),url(https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/VuukZLgaCrho2Ar8Scl9HtV3yD.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 5rem;
+}
+
+#poster_div{
+    border-radius: 1rem;
+    /* border: 1px solid green; */
+    margin-right: 2rem;
+}
+
+#poster_div img{
+    border-radius: 1rem;
+    width: 100%;
+    height: 100%;
+}
+
+#mainAsideDiv{
+    /* border: 1px solid red; */
+    width: 65rem;
+    color: white;
+    padding: 1rem;
+}
+
+#mainAsideDiv #mainTitle_div{
+    /* border: 1px solid green; */
+    padding: 0 1rem;
+}
+
+#mainTitle_div #title_divOne{
+    font-size: 1.7rem;
+}
+
+#mainTitle_div #title_divTwo{
+    display: flex;
+    /* justify-content: space-between; */
+    justify-content: flex-start;
+    align-items: center;
+    /* width: 32%; */
+    /* margin-top: 0.5rem; */
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    /* line-height: 4rem; */
+}
+
+#mainTitle_div #title_divTwo p{
+    margin-right: 0.8rem;
+}
+
+#mainTitle_div #title_divTwo p:nth-child(2){
+    border: 1px solid white;
+    color: black;
+    background-color: white;
+}
+
+#title_divTwo ul li{
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+#title_divTwo #language{
+    text-transform: uppercase;
+}
+
+#title_divTwo ul li::before{
+    content: "\2022";
+    color: white;
+    margin-right: 0.5rem;
+    font-weight: 600;
+}
+
+#mainAsideDiv #mainOverview_div{
+    /* border: 1px solid green; */
+    padding: 0 1rem;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    text-align: justify;
+}
+
+#mainAsideDiv #mainOverview_div p{
+    line-height: 2.2rem;
+}
+
+#mainAsideDiv #mainOverview_div p#overview::before{
+    content: "Overview:";
+    text-decoration: underline;
+    color: cyan;
+}
+
+#mainAsideDiv #mainOverview_div p#tagline::before{
+    content: "Tagline:";
+    text-decoration: underline;
+    color: cyan;
+}
+
+#mainAsideDiv #mainOverview_div p#rating::before{
+    content: "Rating:";
+    text-decoration: underline;
+    color: cyan;
+}
+
+#mainAsideDiv #mainOverview_div p#release::before{
+    content: "Status:";
+    text-decoration: underline;
+    color: cyan;
+}
+
+
+@media (max-width: 1000px){
+    html{
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width: 800px){
+    html{
+        font-size: 12px;
+    }
+}
